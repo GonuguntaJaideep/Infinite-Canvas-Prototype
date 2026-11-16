@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+  background: #175347;
+}
+
+.texture-preview {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#texture-canvas,
+.gradient-overlay {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#texture-canvas {
+  touch-action: none;
+  cursor: grab;
+}
+
+#texture-canvas.is-dragging {
+  cursor: grabbing;
+}
+
+.gradient-overlay {
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    rgba(23, 83, 71, 0) 0%,
+    rgba(23, 83, 71, 0.52) 75%,
+    rgba(23, 83, 71, 0.8) 89%,
+    rgba(23, 83, 71, 0.8) 95%,
+    rgba(23, 83, 71, 0.84) 100%
+  );
+}
