@@ -28,7 +28,7 @@ function render() {
 
   const left = -offsetX / zoom;
   const top = -offsetY / zoom;
-  context.globalAlpha = 0.8;
+  context.globalAlpha = 1;
   context.fillStyle = texturePattern;
   context.fillRect(left, top, width / zoom, height / zoom);
   context.globalAlpha = 1;
